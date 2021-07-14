@@ -91,7 +91,6 @@
     </div>
     <!-- /.container -->
   </nav>
-  <!-- /.breadcrumb -->
 
   <section class="hotel">
     <div class="container">
@@ -121,38 +120,36 @@
       </div>
       <!-- /.hotel-info -->
       <div class="hotel-grid">
-        <div class="slider hotel__slider">
-          <!-- Slider main container -->
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img src="img/slide-1.jpg" alt="slide" width="728" height="450">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/slide-2.jpg" alt="slide" width="728" height="450">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/slide-3.jpg" alt="slide" width="728" height="450">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/slide-4.jpg" alt="slide" width="728" height="450">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/slide-5.jpg" alt="slide" width="728" height="450">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/slide-6.jpg" alt="slide" width="728" height="450">
-              </div>
+        <!-- Slider main container -->
+        <div class="swiper-container hotel-slider hotel__slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide hotel-slider__item">
+              <img src="img/slide-1.jpg" alt="slide" width="728" height="450">
             </div>
-            <!-- If we need navigation buttons -->
-            <button class="slider-button slider-button--prev"></button>
-            <button class="slider-button slider-button--next"></button>
+            <div class="swiper-slide hotel-slider__item">
+              <img src="img/slide-2.jpg" alt="slide" width="728" height="450">
+            </div>
+            <div class="swiper-slide hotel-slider__item">
+              <img src="img/slide-3.jpg" alt="slide" width="728" height="450">
+            </div>
+            <div class="swiper-slide hotel-slider__item">
+              <img src="img/slide-4.jpg" alt="slide" width="728" height="450">
+            </div>
+            <div class="swiper-slide hotel-slider__item">
+              <img src="img/slide-5.jpg" alt="slide" width="728" height="450">
+            </div>
+            <div class="swiper-slide hotel-slider__item">
+              <img src="img/slide-6.jpg" alt="slide" width="728" height="450">
+            </div>
           </div>
-          <!-- /.swiper-container -->
+          <!-- If we need navigation buttons -->
+          <button class="hotel-slider__button hotel-slider__button--prev"></button>
+          <button class="hotel-slider__button hotel-slider__button--next"></button>
         </div>
-        <!-- /.slider -->
+        <!-- /.swiper-container -->
+
         <div class="hotel-right">
           <div class="booking">
             <div class="booking__info">
@@ -188,7 +185,7 @@
           <!-- /.booking -->
           <div class="map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91766.67289389537!2d55.134755193033804!3d25.098937681140224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b580c1a8897%3A0xcc389002704c0d42!2sHilton%20Dubai%20Palm%20Jumeirah!5e0!3m2!1sru!2sru!4v1626167291112!5m2!1sru!2sru"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54716.46127157679!2d98.29089349588413!3d7.993699380845884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305039f77c82826f%3A0xacc83aa6f90754f6!2sHilton%20Garden%20Inn%20Phuket%20Bang%20Tao!5e0!3m2!1sru!2sru!4v1626272862081!5m2!1sru!2sru"
               width="100%" height="213" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <!-- /.map -->
@@ -212,6 +209,133 @@
       </form>
     </div>
     <!-- /.newsletter-wrapper -->
+  </section>
+
+  <section class="reviews">
+    <div class="container">
+      <h2 class="reviews__title">What people think about us</h2>
+      <div class="swiper-container reviews-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__profile">
+                <img class="reviews-slider__avatar" src="img/reviews-avatar.jpg" alt="Photo: Megan Fox">
+                <h3 class="reviews-slider__username">Megan Fox</h3>
+                <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
+                <div class="reviews-slider__rating">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                </div>
+                <!-- /.reviews-slider__rating -->
+              </div>
+              <!-- /.reviews-slider__profile -->
+              <p class="reviews-slider__text">
+                It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well.
+                Issue was only that Lift was not in working and we were allotted to 3rd floor and amenities articles
+                were in corner of gallery which were giving bad feeling. Breakfast was good and support of the staff was
+                also very nice. Location is not good as per atmosphere, it is very nearby most of the popular places but
+                self location in a narrow street is not good. Overall it was a good experience and could recommend.
+              </p>
+              <!-- /.reviews-slider__text -->
+            </div>
+            <!-- /.reviews-slider__item -->
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__profile">
+                <img class="reviews-slider__avatar" src="img/reviews-avatar-2.jpg" alt="Photo: Steve Branson">
+                <h3 class="reviews-slider__username">Steve Branson</h3>
+                <span class="reviews-slider__date">Stayed 17 Apr, 2017</span>
+                <div class="reviews-slider__rating">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                </div>
+                <!-- /.reviews-slider__rating -->
+              </div>
+              <!-- /.reviews-slider__profile -->
+              <p class="reviews-slider__text">
+                All rooms are overlooking, if not the sea, then at least the beautiful lake and garden. Cleaning of
+                rooms - 2 times a day! Breakfasts are simply amazing, in separate blocks for different peoples and
+                preferences - Chinese, Indian, European, Thai, Muslim. An assortment of fruits is also plentiful every
+                day.
+                There are never problems with free sun loungers either at the Pool or on the beach. Beach towels are
+                also freely available and are always freely available in unlimited quantities!
+                The staff is super friendly, super helpful! The whole concept of the hotel is aimed at creating a
+                paradise for holidaymakers!
+              </p>
+              <!-- /.reviews-slider__text -->
+            </div>
+            <!-- /.reviews-slider__item -->
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__profile">
+                <img class="reviews-slider__avatar" src="img/reviews-avatar-3.jpg" alt="Photo: Rachel Rios">
+                <h3 class="reviews-slider__username">Rachel Rios</h3>
+                <span class="reviews-slider__date">Stayed 28 Feb, 2019</span>
+                <div class="reviews-slider__rating">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                </div>
+                <!-- /.reviews-slider__rating -->
+              </div>
+              <!-- /.reviews-slider__profile -->
+              <p class="reviews-slider__text">
+                I liked the beach very much - there are no pronounced low tides, clean transparent sea and soft clean
+                sand, convenient entry into the water. The room was cozy, well located next to the beach. The air
+                conditioner worked well and was not noisy. The staff are very friendly. The breakfasts are excellent.
+                The coffee is great.
+              </p>
+              <!-- /.reviews-slider__text -->
+            </div>
+            <!-- /.reviews-slider__item -->
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__profile">
+                <img class="reviews-slider__avatar" src="img/reviews-avatar-4.jpg" alt="Photo: Fabian Cook">
+                <h3 class="reviews-slider__username">Fabian Cook</h3>
+                <span class="reviews-slider__date">Stayed 31 Dec, 2018</span>
+                <div class="reviews-slider__rating">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                </div>
+                <!-- /.reviews-slider__rating -->
+              </div>
+              <!-- /.reviews-slider__profile -->
+              <p class="reviews-slider__text">
+                First line. Compact and thought out to the smallest detail. The ergonomics of the room is one of the
+                best among many of the world's top hotels. Exit from the room directly to the beach. Decent breakfasts
+                and evening oyster restaurants right on the beach. Cleaning twice a day.
+              </p>
+              <!-- /.reviews-slider__text -->
+            </div>
+            <!-- /.reviews-slider__item -->
+          </div>
+          <!-- /.swiper-slide -->
+
+        </div>
+        <!-- /.swiper-wrapper -->
+        <button class="reviews-slider__button reviews-slider__button--prev"></button>
+        <button class="reviews-slider__button reviews-slider__button--next"></button>
+
+      </div>
+      <!-- /.reviews-slider -->
+
+    </div>
+    <!-- /.container -->
   </section>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
