@@ -35,9 +35,13 @@
       width: 100%
   .booking
     width: 340px
-
   .map
     width: 340px
+  .reviews
+    &-slider
+      &__item
+        max-width: 580px
+
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -81,7 +85,7 @@
         margin-left: 0
     &-right
       flex-direction: column
-      min-height: 450px
+      min-height: 440px
     &-slider
       height: 350px
   .booking
@@ -94,15 +98,109 @@
       width: 92%
       flex-direction: column
       align-items: flex-start
+  .reviews
+    &-slider
+      &__item
+        padding: 0 30px 30px
+        &:after, &:before
+          display: none
+      &__button
+        top: 32px
+        &--prev
+          left: 50%
+          transform: translate(-50%, 0)
+          margin-left: -65px
+        &--next
+          right: 50%
+          transform: translate(50%, 0)
+          margin-right: -65px
+
 @media (max-width: 576px)
   .logo
     width: 99px
-  .slider
-    height: 250px
+  .navbar
+    &-top
+      padding-top: 30px
+      padding-bottom: 30px
   .hotel
     &__slider
       margin-bottom: 20px
+    &-slider
+      height: 350px
   .newsletter
     padding: 76px 0 83px 0
     &__title
       margin-bottom: 37px
+  .subscribe
+    width: 100%
+
+@media (min-width: 320px) and ( max-width: 480px )
+  .container
+    width: 87%
+  .navbar
+    &-top
+      padding-top: 28px
+      padding-bottom: 28px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 14px
+  .breadcrumb
+    &-list
+      padding: 21px 0 18px
+  .hotel
+    padding-top: 0
+    padding-bottom: 40px
+    &-info
+      padding-bottom: 36px
+      &__description
+        margin: 1px 0
+    &-slider
+      height: 179px
+      &__button
+        width: 11px
+        height: 11px
+        &--prev
+          left: 8px
+        &--next
+          right: 8px
+    &-right
+      min-height: 403px
+  .booking
+    height: 210px
+    padding: 29px 21px 26px 23px
+    &__pricetag
+      line-height: 30px
+    &__text
+      margin-top: 4px
+  .map
+    height: 173px
+  .newsletter
+    &-wrapper
+      width: 87%
+    &-title
+      margin-top: 0
+      font-size: 20px
+      line-height: 25px
+      &__strong
+        font-size: 30px
+        line-height: 44px
+  .subscribe
+    &__input
+      padding-left: 20px
+  .reviews
+    &__title
+      margin: 0 auto 40px
+      font-size: 18px
+      line-height: 23px
+      width: 245px
+    &-slider
+      &__profile
+        margin-bottom: 33px
+      &__username
+        margin-top: 0
+      &__button
+        &--prev
+          margin-left: -90px
+        &--next
+          margin-right: -90px
