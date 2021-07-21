@@ -416,6 +416,10 @@ template {
   line-height: 18px;
 }
 
+.navbar-menu__item--mobile--visible {
+  display: none;
+}
+
 .logo {
   width: 177px;
 }
@@ -1494,8 +1498,56 @@ template {
     max-width: 576px;
     width: 92%;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
+  body {
+    padding-top: 78px;
+  }
+  .navbar--mobile--fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .navbar__search--mobile--hidden, .navbar__user--mobile--hidden {
     display: none;
+  }
+  .navbar__search--mobile--visible, .navbar__user--mobile--visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 78px;
+  }
+  .navbar-bottom--visible {
+    display: block;
+  }
+  .navbar-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 31px;
+  }
+  .navbar-menu__item {
+    margin-bottom: 20px;
+  }
+  .navbar-menu__item--mobile--visible {
+    display: block;
   }
   .menu-button {
     display: -webkit-box;
@@ -1522,6 +1574,11 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333;
+  }
+  .user__name--light {
+    color: #fff;
+    margin-left: 0;
+    margin-top: 10px;
   }
   .stars {
     -ms-flex-preferred-size: auto;
@@ -1699,6 +1756,18 @@ template {
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;
+  }
+  .navbar-bottom {
+    top: 70px;
+  }
+  .navbar__search--mobile--visible {
+    margin-bottom: 19px;
+  }
+  .search__input {
+    width: 245px;
+  }
+  .user__name--light {
+    margin-bottom: 7px;
   }
   .breadcrumb-list {
     padding: 21px 0 18px;

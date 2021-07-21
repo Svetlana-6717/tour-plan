@@ -1,3 +1,5 @@
+'use strict';
+
 const hotelSlider = new Swiper('.hotel-slider', {
   // Optional parameters
   loop: true,
@@ -26,4 +28,11 @@ const reviewsSlider = new Swiper('.reviews-slider', {
     enabled: true,
     onlyInViewport: false,
   },
+});
+
+const menuButton = document.querySelector('.menu-button');
+
+menuButton.addEventListener('click', () => {
+  const toggleMenu = document.querySelector('.navbar-bottom');
+  toggleMenu.classList.toggle('navbar-bottom--visible');
 });
