@@ -211,6 +211,14 @@
   .footer
     &__input
       flex-basis: 100%
+  .modal
+    &__dialog
+      width: 400px
+      padding: 23px 58px
+    &__input
+      height: 40px
+    &__message
+      min-height: 100px
 
 @media (max-width: 576px)
   .logo
@@ -304,6 +312,11 @@
           right: 8px
     &-right
       min-height: 403px
+  .stars
+    display: flex
+    justify-content: space-between
+    width: 48px
+    margin-right: 15px
   .booking
     height: 210px
     padding: 29px 21px 26px 23px
@@ -376,3 +389,27 @@
         row-gap: 10px
       &-item
         padding-right: 7px
+  .modal
+    &__dialog
+      width: 280px
+      padding: 13px 18px
+    &__close
+      right: 13px
+      top: 13px
+    &__title
+      font-size: 14px
+      line-height: 18px
+      margin-bottom: 10px
+    &__input
+      margin-bottom: 10px
+    &__message
+      margin-bottom: 10px
+    &__button
+      min-width: 100px
+      min-height: 40px
+      padding: 14px
+      font-size: 12px
+      line-height: 15px
+    &__info
+      font-size: 10px
+      line-height: 12px
