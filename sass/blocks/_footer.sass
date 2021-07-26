@@ -17,12 +17,12 @@
   &__social
     &-links
       display: flex
-      align-items: center
+      align-items: flex-end
       min-width: 83px
       justify-content: space-between
     &-network
       display: flex
-      align-items: start
+      align-items: flex-start
       grid-row: 2 / 4
       grid-column: span 2
   &__contact
@@ -30,12 +30,7 @@
       grid-column: span 2
     &-form
       grid-column: span 2
-  &__form
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
-    margin-bottom: 102px
+      margin-bottom: 95px
   &__ul
     padding: 0
     margin: 0
@@ -57,7 +52,7 @@
     font-style: normal
     font-weight: normal
     font-size: 14px
-    line-height: 160%
+    line-height: 22px
     color: $footer-text-color
     &--mb-2
       margin-bottom: 20px
@@ -68,40 +63,47 @@
     font-style: normal
     font-weight: normal
     font-size: 14px
-    line-height: 160%
+    line-height: 22px
     color: $footer-text-color
+    margin-top: 0
     margin-bottom: 22px
   &__link
     text-decoration: none
     color: inherit
   &__input
-    margin-bottom: 15px
-    flex-basis: 48%
+    width: 100%
+    &-group
+      margin-bottom: 16px
+      flex-basis: 48%
   &__message
-    height: 123px
+    min-height: 123px
     flex-basis: 100%
-    margin-bottom: 22px
+    margin-bottom: 21px
   &__info
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
-  &__block
-    &-info
+  &-bottom
+    max-width: 696px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-left: auto
+    &__copyright
+      width: 283px
       display: flex
-      justify-content: flex-end
-    &-text
-      display: flex
+      justify-content: space-between
       padding: 0
-      margin: 0 277px 0 0
+      margin: 0
       list-style: none
+    &__item
       font-style: normal
-      font-weight: bold
+      font-weight: normal
       font-size: 12px
       line-height: 15px
-    &-item
-      padding-right: 10px
-    &-partners
+      color: $light
+    &__image
       width: 136px
       height: 22px

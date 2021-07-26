@@ -1,10 +1,7 @@
-window.addEventListener('DOMContentLoaded', function () {
-
-  'use strict';
+$(document).ready(function () {
 
   // slider
-
-  const hotelSlider = new Swiper('.hotel-slider', {
+  var hotelSlider = new Swiper('.hotel-slider', {
     // Optional parameters
     loop: true,
 
@@ -19,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  const reviewsSlider = new Swiper('.reviews-slider', {
+  var reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,
 
@@ -35,37 +32,55 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   // menu
-
-  const menuButton = document.querySelector('.menu-button');
-
-  menuButton.addEventListener('click', () => {
-    const toggleMenu = document.querySelector('.navbar-bottom');
-    toggleMenu.classList.toggle('navbar-bottom--visible');
+  var menuButton = $('.menu-button');
+  menuButton.on('click', function () {
+    $('.navbar-bottom').toggleClass('navbar-bottom--visible');
   });
 
   // modal block
+  var modalButton = $("[data-toogle=modal]");
+  var closeModalButton = $(".modal__close");
+  var modalOverlay = $(".modal__overlay");
+  var modalDialog = $(".modal__dialog");
 
-  const toggleModal = () => {
-    const modalOverlay = document.querySelector('.modal__overlay');
-    const modalDialog = document.querySelector('.modal__dialog');
-    const modalButton = document.querySelector('.booking__button');
-    const closeModalButton = document.querySelector('.modal__close');
+  modalButton.on("click", openModal);
+  closeModalButton.on("click", closeModal);
 
-    const handlerModal = () => {
-      modalOverlay.classList.toggle('modal__overlay--visible');
-      modalDialog.classList.toggle('modal__dialog--visible');
-    };
+  function openModal() {
+    modalOverlay.addClass('modal__overlay--visible');
+    modalDialog.addClass('modal__dialog--visible');
+  }
 
-    modalButton.addEventListener('click', () => {
-      handlerModal();
+  function closeModal(event) {
+    event.preventDefault();
+    modalOverlay.removeClass('modal__overlay--visible');
+    modalDialog.removeClass('modal__dialog--visible');
+  }
+
+  // валидация форм
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Enter your name",
+          minlength: "The name must be at least 2 letters long",
+        },
+        email: {
+          required: "Enter your email",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: {
+          required: "Enter your phone",
+        },
+      }
     });
+  });
 
-    closeModalButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      handlerModal();
-    });
+  // маска телефона
+  $('#footer-phone').mask('+7 (999) 999-99-99');
+  $('#modal-phone').mask('+7 (999) 999-99-99');
 
-  };
-
-  toggleModal();
 });
+
+
