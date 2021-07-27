@@ -81,6 +81,8 @@ $(document).ready(function () {
   $('#footer-phone').mask('+7 (999) 999-99-99');
   $('#modal-phone').mask('+7 (999) 999-99-99');
 
+  AOS.init();
+
 });
 
 
