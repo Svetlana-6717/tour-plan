@@ -224,7 +224,7 @@
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
       <form class="subscribe newsletter__subscribe" action="#">
-        <input class="subscribe__input" type="text" placeholder="Your email address" name="email">
+        <input class="subscribe__input" type="email" placeholder="Your email address" name="email" required>
         <button class="subscribe__button">Send</button>
       </form>
     </div>
@@ -233,7 +233,7 @@
 
   <section class="reviews">
     <div class="container">
-      <h2 class="reviews__title" data-aos="fade-up">What people think about us</h2>
+      <h2 class="reviews__title">What people think about us</h2>
 
       <div class="swiper-container reviews-slider">
         <div class="swiper-wrapper">
@@ -515,7 +515,8 @@
 
           <form class="footer__form form" action="#">
             <div class="footer__input-group">
-              <input class="input footer__input" type="text" placeholder="Your Full Name*" name="name" required>
+              <input class="input footer__input" type="text" placeholder="Your Full Name*" name="name" required
+                minlength="2">
             </div>
             <div class="footer__input-group">
               <input class="input footer__input" id="footer-phone" type="tel" placeholder="Phone Number*" name="phone"

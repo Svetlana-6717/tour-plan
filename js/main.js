@@ -57,7 +57,7 @@ $(document).ready(function () {
     modalDialog.removeClass('modal__dialog--visible');
   }
 
-  // валидация форм
+  // validate form
   $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid",
@@ -77,7 +77,7 @@ $(document).ready(function () {
     });
   });
 
-  // маска телефона
+  // mask phone
   $('#footer-phone').mask('+7 (999) 999-99-99');
   $('#modal-phone').mask('+7 (999) 999-99-99');
 
