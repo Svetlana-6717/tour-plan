@@ -55,6 +55,10 @@
         max-width: 579px
       &__button
         top: 50%
+        &--prev
+          left: 0
+        &--next
+          right: 0
     &__title
       font-size: 30px
       line-height: 38px
@@ -84,13 +88,16 @@
         grid-row: 1 / 2
         grid-column: span 4
         align-self: center
+        margin-left: -55px
     &__categories
       grid-row: 2 / 3
       grid-column: span 2
     &__legal
       grid-column: span 2
+      margin: 0 auto
     &__additional
       grid-column: span 2
+      margin-left: -40px
     &__contact
       &-details
         grid-column: span 6
@@ -100,6 +107,7 @@
         grid-column: span 5
         grid-row: 4
         margin-bottom: 61px
+        margin-right: 43px
     &__text
       margin-top: -9px
 
@@ -147,20 +155,16 @@
             display: block
   .menu
     &-button
-      display: flex
+      display: block
       width: 16px
       height: 11px
-      padding: 0
-      align-items: center
-      justify-content: space-between
-      flex-direction: column
-      border: none
+      background-image: url(../img/menu-button.svg)
       background-color: $light
+      border: none
+      outline: none
       cursor: pointer
-      &__line
-        width: 16px
-        height: 1px
-        background-color: $text-color
+      &--active
+        background-image: url(../img/menu-close.svg)
   .user
     &__name
       &--light
@@ -228,6 +232,17 @@
       height: 40px
     &__message
       min-height: 100px
+  .footer
+    &__social
+      &-network
+        margin-left: 0
+    &__legal
+      margin-left: 0
+    &__additional
+      margin-left: 0
+    &__contact
+      &-form
+        margin-right: 0
 
 @media (max-width: 576px)
   .logo

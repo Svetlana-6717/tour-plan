@@ -14,6 +14,8 @@
     align-self: center
   &__categories
     grid-row: 1 / 4
+  &__legal
+    margin-left: 70px
   &__social
     &-links
       display: flex
@@ -27,6 +29,7 @@
       grid-column: span 2
   &__contact
     &-details
+      margin-top: 12px
       grid-column: span 2
     &-form
       grid-column: span 2
@@ -59,21 +62,39 @@
   &__icon
     &-wrapper
       min-width: 40px
+  &__phone
+    text-decoration: none
+    color: inherit
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px
+  &__email
+    text-decoration: none
+    color: inherit
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px
   &__text
     font-style: normal
     font-weight: normal
     font-size: 14px
     line-height: 22px
     color: $footer-text-color
-    margin-top: 0
+    margin-top: 12px
     margin-bottom: 22px
   &__link
     text-decoration: none
     color: inherit
   &__input
     width: 100%
-    &-group
+    &-wrapper
+      display: flex
+      justify-content: space-between
       margin-bottom: 16px
+      flex-basis: 100%
+    &-group
       flex-basis: 48%
   &__message
     min-height: 123px
@@ -84,7 +105,7 @@
     font-weight: bold
     font-size: 12px
     line-height: 15px
-    color: #E0E0E0
+    color: $footer-info
   &-bottom
     max-width: 696px
     display: flex

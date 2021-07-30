@@ -36,11 +36,7 @@
         </a>
         <!-- /.user -->
 
-        <button class="menu-button navbar-top__menu-button">
-          <span class="menu-button__line"></span>
-          <span class="menu-button__line"></span>
-          <span class="menu-button__line"></span>
-        </button>
+        <button class="menu-button navbar-top__menu-button"></button>
       </div>
       <!-- /.navbar-top -->
     </div>
@@ -223,7 +219,7 @@
         subscribe to our
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
-      <form class="subscribe newsletter__subscribe" action="#">
+      <form class="subscribe newsletter__subscribe form" action="#">
         <input class="subscribe__input" type="email" placeholder="Your email address" name="email" required>
         <button class="subscribe__button">Send</button>
       </form>
@@ -467,7 +463,7 @@
           <h3 class="footer__title">Legal information</h3>
           <ul class="footer__ul">
             <li class="footer__item">
-              <a class="footer__link" href="#">ATerms & Conditions</a>
+              <a class="footer__link" href="#">Terms & Conditions</a>
             </li>
             <li class="footer__item">
               <a class="footer__link" href="#">Disclaimer</a>
@@ -497,15 +493,28 @@
               <div class="footer__icon-wrapper">
                 <img class="footer__icon" src="img/contact-phone-call.svg" alt="Icon: phone-call">
               </div>
-              Tel (business hours) : 269 1500 <br>
-              Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
-              Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+              <div class="footer__phone-wrapper">
+                <span>
+                  Tel (business hours) :
+                  <a class="footer__phone" href="tel:2691500">269 1500</a>
+                </span> <br>
+                <span>
+                  Tel (hotline) Monday - Saturday:
+                  <a class="footer__phone" href="tel:52565138">52-56-61-38</a>
+                  (08:00 am – 20:00pm)
+                </span><br>
+                <span>
+                  Tel (hotline) Sunday:
+                  <a class="footer__phone" href="tel:52565138">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)
+                </span>
+              </div>
             </li>
             <li class="footer__item footer__item--mb-2">
               <div class="footer__icon-wrapper">
                 <img class="footer__icon" src="img/email.svg" alt="Icon: email">
               </div>
-              cherly.lawson@example.com
+              <a class="footer__email" href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
             </li>
           </ul>
         </div>
@@ -514,13 +523,15 @@
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
 
           <form class="footer__form form" action="#">
-            <div class="footer__input-group">
-              <input class="input footer__input" type="text" placeholder="Your Full Name*" name="name" required
-                minlength="2">
-            </div>
-            <div class="footer__input-group">
-              <input class="input footer__input" id="footer-phone" type="tel" placeholder="Phone Number*" name="phone"
-                required>
+            <div class="footer__input-wrapper">
+              <div class="footer__input-group">
+                <input class="input footer__input" type="text" placeholder="Your Full Name*" name="name" required
+                  minlength="2">
+              </div>
+              <div class="footer__input-group">
+                <input class="input footer__input" id="footer-phone" type="tel" placeholder="Phone Number*" name="phone"
+                  required minlength="18">
+              </div>
             </div>
             <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
             <button class="button footer__button" type="submit">Send</button>
@@ -557,7 +568,8 @@
       <h3 class="modal__title modal__title--mb-3">Send us a message</h3>
       <form class="modal__form form" action="#">
         <input class="input modal__input" type="text" placeholder="Your Full Name*" name="name" required minlength="2">
-        <input class="input modal__input" id="modal-phone" type="tel" placeholder="Phone Number*" name="phone" required>
+        <input class="input modal__input" id="modal-phone" type="tel" placeholder="Phone Number*" name="phone" required
+          minlength="18">
         <input class="input modal__input" type="email" placeholder="Email*" name="email" required>
         <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
         <button class="button modal__button" type="submit">Send</button>
