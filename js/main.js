@@ -19,6 +19,7 @@ $(document).ready(function () {
   var reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,
+    autoHeight: true,
 
     // Navigation arrows
     navigation: {
@@ -60,6 +61,11 @@ $(document).ready(function () {
     enableScroll();
   }
 
+  $(".card__button").each(function () {
+    $(this).on('click', openModal);
+  })
+
+
   // scroll lock
 
   function disabledScroll() {
@@ -90,13 +96,12 @@ $(document).ready(function () {
       errorClass: "invalid",
       messages: {
         name: {
-          required: "Enter your name",
+          required: "Enter your name.",
           minlength: "Your name must consist of at least 2 characters",
-          name: "Letters only please"
         },
         email: {
           required: "Enter your email",
-          email: "Your email address must be in the format of name@domain.com"
+          email: "Your email address must be in the format of name@domain.com",
         },
         phone: {
           required: "Enter your phone",
@@ -113,9 +118,13 @@ $(document).ready(function () {
   AOS.init();
 
   $("input[name=name]").each(function () {
-    $(this).blur(function () {
+    $(this).bind('blur focus', function () {
       if (!/^[a-z]+$/i.test(this.value)) {
-        this.value = '';
+        // this.value = '';
+        $(this).removeClass("valid");
+        $(this).addClass("invalid");
+        $("#name-error").css('display', 'block');
+        $("#name-error").text("English letters only");
       } else {
         this.value = this.value;
       }
@@ -123,9 +132,32 @@ $(document).ready(function () {
   });
 
   $.validator.methods.email = function (value, element) {
-    return this.optional(element) || /[a-z]+@[a-z]+\.[a-z]+/.test(value);
+    return this.optional(element) || /[a-z]+@[a-z]+\.[a-z]{2,4}/.test(value);
   };
 
+  $(".newsletter__subscribe").validate({
+    errorClass: "invalid",
+    rules: {
+      required: true,
+      email: true
+    }
+  });
+
+  $(".subscribe__input").bind('blur input', function () {
+
+    if (!/[a-z]+@[a-z]+\.[a-z]{2,4}/.test(this.value)) {
+      $(this).addClass("invalid");
+      $(".subscribe-error").addClass("invalid");
+      $(".subscribe-error").css('display', 'block');
+      $(".subscribe-error").text("Your email address must be in the format of name@domain.com");
+    } else {
+      $(this).removeClass("invalid");
+      $(".subscribe-error").removeClass("invalid");
+      $(".subscribe-error").css('display', 'none');
+      $(".subscribe-error").text('');
+      this.value = this.value
+    }
+  })
 });
 
 

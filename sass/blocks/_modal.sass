@@ -27,9 +27,12 @@
     z-index: 101
     opacity: 0
     transition: opacity 0.4s
+    overflow: auto
     &--visible
       display: block
       opacity: 1
+      width: 100vw
+      max-height: 95vh
   &__title
     font-style: normal
     font-weight: bold
@@ -53,6 +56,14 @@
     min-height: 123px
     margin-top: 15px
   &__button
+    min-width: 160px
+    min-height: 50px
+    padding: 18px
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    border-radius: 4px
     margin-top: 15px
   &__info
     font-style: normal
