@@ -1,11 +1,14 @@
 # Tour Plan
-Сайт бронирования отелей
+Сайт бронирования отелей. Учебный проект, практика верстки.
 
 ### Технологии
 - HTML
-- CSS
 - Sass
+- Swiper.js
 - jQuery
+- jQuery.validate
+- jQuery.mask
+- AOS.js
 
 ### Ссылка для просмотра
 [Link](https://cv-lana.github.io/tour-plan/)
